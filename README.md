@@ -1,15 +1,19 @@
 # next-find
-> Returns the matched element, else undefined.
+> Find value by path.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
-## install:
+## installation
 ```bash
-npm install -S afeiship/next-find --registry=https://registry.npm.taobao.org
+npm install -S @jswork/next-find
 ```
 
-## usage:
+## usage
 ```js
-import 'next-find';
+import '@jswork/next-find';
 
 const users = [
   { 'user': 'barney',  'age': 36, 'active': true },
@@ -17,12 +21,24 @@ const users = [
   { 'user': 'pebbles', 'age': 1,  'active': true }
 ];
 
-const result = nx.find(users, function(_,chr) {
+const result = nx.find(users, function(chr) {
   return chr.age < 40;
-});
+},'user');
 
-// return the first one:
-// { 'user': 'barney',  'age': 36, 'active': true }
-
-
+// 'barney'
 ```
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/next-find/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/next-find
+[version-url]: https://npmjs.org/package/@jswork/next-find
+
+[license-image]: https://img.shields.io/npm/l/@jswork/next-find
+[license-url]: https://github.com/afeiship/next-find/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-find
+[size-url]: https://github.com/afeiship/next-find/blob/master/dist/next-find.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-find
+[download-url]: https://www.npmjs.com/package/@jswork/next-find
